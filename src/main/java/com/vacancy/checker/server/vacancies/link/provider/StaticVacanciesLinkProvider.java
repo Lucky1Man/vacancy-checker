@@ -28,6 +28,11 @@ public class StaticVacanciesLinkProvider implements VacanciesLinkProvider {
                                         .withExperienceLevel(ExperienceLevel.ONE_YEAR)
                                         .withVacancySite(VacancySite.DJINNI)
                                         .withLink("https://djinni.co/jobs/?primary_keyword=Java&exp_level=1y")
+                                        .build(),
+                                LinkToVacancies.builder()
+                                        .withExperienceLevel(ExperienceLevel.NO_EXPERIENCE)
+                                        .withVacancySite(VacancySite.DJINNI)
+                                        .withLink("https://djinni.co/jobs/?primary_keyword=Java&exp_level=no_exp")
                                         .build()
                         );
                     }
