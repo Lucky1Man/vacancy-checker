@@ -1,0 +1,10 @@
+supported_sites:
+  djinni:
+    link_to_vacancies: 'asd'
+  dou:
+    link_to_vacancies: 'asd'
+spring:
+  task:
+    scheduling:
+      pool:
+        size: 2
