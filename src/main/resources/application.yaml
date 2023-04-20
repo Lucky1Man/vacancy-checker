@@ -4,6 +4,11 @@ supported_sites:
   dou:
     link_to_vacancies: 'asd'
 spring:
+  jpa:
+    properties:
+      hibernate:
+        ddl-auto: validate
+        dialect: org.hibernate.dialect.PostgreSQLDialect
   task:
     scheduling:
       pool:

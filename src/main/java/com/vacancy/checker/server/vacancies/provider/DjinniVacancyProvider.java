@@ -22,6 +22,7 @@ public class DjinniVacancyProvider extends AbstractVacancyProvider<String> {
     public DjinniVacancyProvider(
             VacanciesLinkProvider vacanciesLinkProvider,
             VacanciesLoadingProvider<String> vacanciesLoadingProvider,
+            @Qualifier("vacanciesStorageImpl")
             KnownVacanciesStorage knownVacanciesStorage,
             @Qualifier("djinniParser")
             VacanciesHtmlPageParser djinniParser) {

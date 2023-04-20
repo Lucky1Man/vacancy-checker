@@ -21,6 +21,7 @@ public class DOUVacancyProvider extends AbstractVacancyProvider<String>{
 
     public DOUVacancyProvider(VacanciesLinkProvider vacanciesLinkProvider,
                                  VacanciesLoadingProvider<String> vacanciesLoadingProvider,
+                                 @Qualifier("vacanciesStorageImpl")
                                  KnownVacanciesStorage knownVacanciesStorage,
                                  @Qualifier("DOUParser")
                                  VacanciesHtmlPageParser douParser) {
