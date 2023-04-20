@@ -41,6 +41,33 @@ public class StaticVacanciesLinkProvider implements VacanciesLinkProvider {
                     public List<LinkToVacancies> setValue(List<LinkToVacancies> value) {
                         throw new UnsupportedOperationException();
                     }
+                },
+                new Map.Entry<>() {
+                    @Override
+                    public VacancySite getKey() {
+                        return VacancySite.DOU;
+                    }
+
+                    @Override
+                    public List<LinkToVacancies> getValue() {
+                        return List.of(
+                                LinkToVacancies.builder()
+                                        .withExperienceLevel(ExperienceLevel.ONE_YEAR)
+                                        .withVacancySite(VacancySite.DOU)
+                                        .withLink("https://jobs.dou.ua/vacancies/?category=Java&exp=1-3")
+                                        .build(),
+                                LinkToVacancies.builder()
+                                        .withExperienceLevel(ExperienceLevel.NO_EXPERIENCE)
+                                        .withVacancySite(VacancySite.DOU)
+                                        .withLink("https://jobs.dou.ua/vacancies/?category=Java&exp=0-1")
+                                        .build()
+                        );
+                    }
+
+                    @Override
+                    public List<LinkToVacancies> setValue(List<LinkToVacancies> value) {
+                        throw new UnsupportedOperationException();
+                    }
                 }
         );
     }

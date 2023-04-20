@@ -1,10 +1,10 @@
-package com.vacancy.checker.server.vacancies.provider.djinni;
+package com.vacancy.checker.server.vacancies.provider;
 
 import com.vacancy.checker.server.vacancies.link.provider.VacanciesLinkProvider;
 import com.vacancy.checker.server.vacancies.loader.VacanciesLoadingProvider;
 import com.vacancy.checker.server.vacancies.model.Vacancy;
+import com.vacancy.checker.server.vacancies.model.VacancySite;
 import com.vacancy.checker.server.vacancies.page.parser.VacanciesHtmlPageParser;
-import com.vacancy.checker.server.vacancies.provider.AbstractVacancyProvider;
 import com.vacancy.checker.server.vacancies.storage.KnownVacanciesStorage;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -30,8 +30,13 @@ public class DjinniVacancyProvider extends AbstractVacancyProvider<String> {
     }
 
     @Override
-    protected Set<Vacancy> extractAllAvailableVacancies(VacancyLinkToResponseEntity vacancyLinkToResponseEntity) {
+    protected Set<Vacancy> extractAllAvailableVacancies(VacancyLinkToResponseEntity<String> vacancyLinkToResponseEntity) {
         return new HashSet<>(djinniParser.getAllVacancies(vacancyLinkToResponseEntity));
+    }
+
+    @Override
+    protected VacancySite getVacancySite() {
+        return VacancySite.DJINNI;
     }
 
 }
