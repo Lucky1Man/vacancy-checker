@@ -3,3 +3,8 @@ supported_sites:
     link_to_vacancies: 'asd'
   dou:
     link_to_vacancies: 'asd'
+spring:
+  task:
+    scheduling:
+      pool:
+        size: 2
